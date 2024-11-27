@@ -9,4 +9,18 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="new.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="new.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="20241120.MyDocumentViewer">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+  </ItemGroup>
+
 </Project>
