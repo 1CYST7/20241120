@@ -14,7 +14,7 @@
     </Window.CommandBindings>
     <DockPanel>
         <ToolBarTray DockPanel.Dock="Top" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Bisque">
-            <ToolBar x:Name="applicationToolBar" Height="40" Width="200">
+            <ToolBar x:Name="applicationToolBar" Height="40" Width="180">
                 <Button x:Name="newButton" Command="ApplicationCommands.New" Width="38" Height="38">
                     <Image Height="32" Width="32" Source="/new.png"/>
                 </Button>
@@ -28,7 +28,7 @@
                     <Image Height="32" Width="32" Source="/trash.png"/>
                 </Button>
             </ToolBar>
-            <ToolBar x:Name="editingToolBar" Height="40" Width="500" Background="Bisque">
+            <ToolBar x:Name="editingToolBar" Height="40" Width="600" Background="Bisque">
                 <ToggleButton x:Name="boldToggleButton" Width="38" Height="38" Command="EditingCommands.ToggleBold">
                     <Image Height="30" Width="30" Source="/bold.png"/>
                 </ToggleButton>
@@ -39,6 +39,7 @@
                     <Image Height="30" Width="30" Source="/underline.png"/>
                 </ToggleButton>
                 <xctk:ColorPicker x:Name="fontColorPicker" Width="100" Height="32" DisplayColorAndName="True" SelectedColorChanged="fontColorPicker_SelectedColorChanged"/>
+                <xctk:ColorPicker x:Name="BackgroundColorPicker" Width="100" Height="32" DisplayColorAndName="True" SelectedColorChanged="BackgroundColorPicker_SelectedColorChanged"/>
                 <ComboBox x:Name="fontFamilyComboBox" HorizontalAlignment="Left" VerticalAlignment="Center" Height="32" Width="150" Margin="10,0,0,0" SelectionChanged="fontFamilyComboBox_SelectionChanged"/>
                 <ComboBox x:Name="fontSizeComboBox" HorizontalAlignment="Left" VerticalAlignment="Center" Height="32" Width="50" Margin="10,0,0,0" SelectionChanged="fontSizeComboBox_SelectionChanged"/>
             </ToolBar>
