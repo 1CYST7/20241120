@@ -7,12 +7,20 @@
         mc:Ignorable="d"
         Title="MyDocumentViewer" Height="450" Width="800">
     <Window.CommandBindings>
+        <!-- 定義視窗的命令綁定，將 ApplicationCommands.New 命令綁定到 NewCommand_Executed 方法 -->
         <CommandBinding Command="ApplicationCommands.New" Executed="NewCommand_Executed"/>
     </Window.CommandBindings>
     <DockPanel>
-        <ToolBarTray DockPanel.Dock="Top" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Beige">
-            <ToolBar x:Name="applicationToolBar" Height="40" Width="200">
-                <Button x:Name="newButton" Command="ApplicationCommands.New" Width="38" Height="38">
+        <!-- 定義一個工具列托盤，停駐在 DockPanel 的頂部，背景顏色為米色 -->
+        <ToolBarTray DockPanel.Dock="Top" Background="Beige"
+                 HorizontalAlignment="Left" VerticalAlignment="Top" >
+            <!-- 定義一個工具列，名稱為 applicationToolBar，高度為 40，寬度為 200 -->
+            <ToolBar x:Name="applicationToolBar" 
+                 Height="40" Width="200">
+                <!-- 定義一個按鈕，名稱為 newButton，綁定 ApplicationCommands.New 命令，寬度和高度為 38 -->
+                <Button x:Name="newButton" 
+                    Command="ApplicationCommands.New" Width="38" Height="38">
+                    <!-- 定義按鈕內的圖像，寬度和高度為 38，來源為 /new.png -->
                     <Image Height="38" Width="38" Source="/new.png"/>
                 </Button>
             </ToolBar>

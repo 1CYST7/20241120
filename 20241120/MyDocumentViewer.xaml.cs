@@ -26,6 +26,7 @@ namespace _20241120
 
         private void NewCommand_Executed(object sender, ExecutedRoutedEventArgs e)
         {
+            //建立新myDocumentViewer並顯示
             MyDocumentViewer myDocumentViewer = new MyDocumentViewer();
             myDocumentViewer.Show();
         }

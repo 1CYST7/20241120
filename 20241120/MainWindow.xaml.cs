@@ -23,6 +23,7 @@ namespace _20241120
 
         private void OpenButton_Click(object sender, RoutedEventArgs e)
         {
+            //建立新myDocumentViewer並顯示
             MyDocumentViewer myDocumentViewer = new MyDocumentViewer();
             myDocumentViewer.Show();
         }

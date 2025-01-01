@@ -7,7 +7,10 @@
         mc:Ignorable="d"
         Title="小作家" Height="450" Width="800">
     <Grid>
-        <Button x:Name="openButton" Content="開新文件" HorizontalAlignment="Left" Margin="142,83,0,0" VerticalAlignment="Top" Height="67" Width="222" FontSize="22" Click="OpenButton_Click"/>
+        <Button x:Name="openButton" Content="開新文件" Margin="142,83,0,0"
+                HorizontalAlignment="Left"  VerticalAlignment="Top" Height="67" Width="222" 
+                FontSize="22" 
+                Click="OpenButton_Click"/>
 
     </Grid>
 </Window>
