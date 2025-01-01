@@ -15,6 +15,7 @@
     <DockPanel>
         <ToolBarTray DockPanel.Dock="Top" Background="Bisque"
                      HorizontalAlignment="Left" VerticalAlignment="Top" >
+            <!--藍色區域-->
             <ToolBar x:Name="applicationToolBar" 
                      Height="40" Width="180">
                 <Button x:Name="newButton" Command="ApplicationCommands.New" 
@@ -35,6 +36,7 @@
                     <Image Height="32" Width="32" Source="/trash.png"/>
                 </Button>
             </ToolBar>
+            <!--橘色區域-->
             <ToolBar x:Name="editingToolBar" Background="Bisque"
                      Height="40" Width="600" >
                 <ToggleButton x:Name="boldToggleButton" 
@@ -50,16 +52,22 @@
                     <Image Height="30" Width="30" Source="/underline.png"/>
                 </ToggleButton>
                 <xctk:ColorPicker x:Name="fontColorPicker" 
-                                  Width="100" Height="32" DisplayColorAndName="True" SelectedColorChanged="fontColorPicker_SelectedColorChanged"/>
-                <xctk:ColorPicker x:Name="BackgroundColorPicker" Width="100" Height="32" DisplayColorAndName="True" SelectedColorChanged="BackgroundColorPicker_SelectedColorChanged"/>
+                                  Width="100" Height="32" DisplayColorAndName="True" 
+                                  SelectedColorChanged="fontColorPicker_SelectedColorChanged"/>
+                <xctk:ColorPicker x:Name="BackgroundColorPicker" 
+                                  Width="100" Height="32" DisplayColorAndName="True" 
+                                  SelectedColorChanged="BackgroundColorPicker_SelectedColorChanged"/>
                 <ComboBox x:Name="fontFamilyComboBox" Margin="10,0,0,0"
-                          Height="32" Width="150" HorizontalAlignment="Left" VerticalAlignment="Center"   SelectionChanged="fontFamilyComboBox_SelectionChanged"/>
+                          Height="32" Width="150" HorizontalAlignment="Left" VerticalAlignment="Center"   
+                          SelectionChanged="fontFamilyComboBox_SelectionChanged"/>
                 <ComboBox x:Name="fontSizeComboBox" Margin="10,0,0,0"
-                          Height="32" Width="50"
-                          HorizontalAlignment="Left" VerticalAlignment="Center"  SelectionChanged="fontSizeComboBox_SelectionChanged"/>
+                          Height="32" Width="50" HorizontalAlignment="Left" VerticalAlignment="Center"  
+                          SelectionChanged="fontSizeComboBox_SelectionChanged"/>
             </ToolBar>
         </ToolBarTray>
-        <RichTextBox x:Name="documentRichTextBox" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Background="#FFF4F1E4" SelectionChanged="documentRichTextBox_SelectionChanged">
+        <!--可以確保使用者在內容超出顯示區域時能夠滾動查看完整內容-->
+        <RichTextBox x:Name="documentRichTextBox" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Background="#FFF4F1E4" 
+                     SelectionChanged="documentRichTextBox_SelectionChanged">
             <FlowDocument/>
         </RichTextBox>
     </DockPanel>
